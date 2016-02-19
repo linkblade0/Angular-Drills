@@ -3,10 +3,19 @@
 		<link rel="stylesheet" href="style.css"></link>
 	</head>
 	<body ng-controller="arrayController">
-	
-		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+
+		<div class="list">
+			<ul ng-repeat = 'person in dataList'>
+				<li>Name: {{person.name}}</li>
+				<li>Email: {{person.email}}</li>
+				<li>DoH: {{person.dateEmployed}}</li>
+				<li>Phone: {{person.phone}}</li>
+			</ul>
+		</div>
+
+
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.js"></script>
 		<script src="app.js"></script>
 		<script src="controller.js"></script>
 		<script src="service.js"></script>
-	</body>
 </html>
