@@ -1,7 +1,17 @@
 <html ng-app="apiApp">
-	<body>
-		
-				<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+	<body ng-controller='myCtrl'>
+
+		<input type="text" placeholder="Search for Pokemon by number" ng-model='pId'>
+		<button type="button" ng-click='display()'>Click Me</button>
+
+		<div class="pokemon" ng-repeat='poke in pokemon'>
+			Pokemon Number: {{poke.id}} <br>
+			Name: {{poke.name | capitalize}} <br>
+			Height: {{poke.height}} <br>
+			Weight: {{poke.weight}}
+		</div>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.js"></script>
 		<script src="app.js"></script>
 		<script src="controller.js"></script>
 		<script src="service.js"></script>
